@@ -1,4 +1,4 @@
 mars-shellscripts
 =================
 
-random shell scripts i wrote
+shellscripts and dotfiles
