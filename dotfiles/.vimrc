@@ -1,25 +1,38 @@
-version 6.0
-if &cp | set nocp | endif
-let s:cpo_save=&cpo
-set cpo&vim
-nmap gx <Plug>NetrwBrowseX
-nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
-let &cpo=s:cpo_save
-unlet s:cpo_save
-set background=dark
-set backspace=indent,eol,start
-set fileencodings=ucs-bom,utf-8,default,latin1
-set helplang=de
+"mars vim config
+
+set nocompatible
+
+"vundle config
+
+filetype plugin indent off
+syntax off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+"Plugins go here:
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdtree'
+
+"Plugin section end
+
+call vundle#end()
+filetype plugin indent on
+syntax on
+
+"config
+
+set fileencodings=utf-8
+set ffs=unix
+set autoread
 set history=500
 set nomodeline
-set printoptions=paper:a4
-set ruler
-set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-" vim: set ft=vim :
-
-"my config
-set autoread
+set backspace=indent,eol,start
 set ruler
 set showmatch
 syntax enable
@@ -29,4 +42,38 @@ set shiftwidth=4
 set tabstop=4
 set wrap
 set number
-"set list
+set laststatus=2
+set ignorecase
+set hlsearch
+set clipboard=unnamed
+set wildmode=longest,list
+set wildmenu
+set timeoutlen=250
+
+"easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"nerdtree config
+
+autocmd vimenter * NERDTree
+"open nerdtree with ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+"close if only nerdtree is left"
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"syntastic config
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"end
+
