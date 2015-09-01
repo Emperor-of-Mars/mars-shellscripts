@@ -1,7 +1,8 @@
 #!/bin/sh
 
-#run as root
+#remap capslock as escape for x
+setxkbmap -option caps:escape
 
-xmodmap -e 'keycode 66 = Escape'
-xmodmap -e 'clear Lock'
+#add this to /etc/profile
+#remap capslock as escape for shell
 echo keycode 58 = Escape | loadkeys

@@ -13,11 +13,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 "Plugins go here:
-Plugin 'Rip-Rip/clang_complete'
+"Plugin 'Rip-Rip/clang_complete'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'fholgado/minibufexpl.vim'
 
 "Plugin section end
 
