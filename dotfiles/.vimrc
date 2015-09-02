@@ -19,7 +19,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'fholgado/minibufexpl.vim'
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+Plugin 'wincent/command-t'
 
 "Plugin section end
 
@@ -51,8 +53,10 @@ set clipboard=unnamed
 set wildmode=longest,list
 set wildmenu
 set timeoutlen=250
+let mapleader = "ß"
 
 "easier split navigation
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -76,6 +80,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"commandT config
+
+nnoremap <silent> <Leader>t :CommandT<CR>
+nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 "end
 

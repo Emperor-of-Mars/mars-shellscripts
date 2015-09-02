@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/mars/Projekte/maudio/src/core/node'
+let g:netrw_dirhist_2='/home/mars'
+let g:netrw_dirhist_3='/home/mars/Projekte'
+let g:netrw_dirhist_4='/home/mars/Projekte/test'
+let g:netrw_dirhist_5='/home/mars/Projekte/test/winmalist'
+let g:netrw_dirhist_6='/home/mars'
+let g:netrw_dirhist_7='/home/mars/Projekte/test/vartemp'
+let g:netrw_dirhist_8='/home/mars'
