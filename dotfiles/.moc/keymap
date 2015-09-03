@@ -1,0 +1,7 @@
+#custom keymap for moc
+
+menu_down             += j
+menu_up               += k
+
+history_up            += k
+history_down          += j

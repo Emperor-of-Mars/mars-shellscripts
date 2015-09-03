@@ -1,0 +1,5 @@
+#custom moc config
+
+Theme = darkdot_theme
+
+Keymap = keymap
