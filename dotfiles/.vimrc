@@ -62,9 +62,20 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"easier insert mode movement
+
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
+inoremap <C-b> <C-o>b
+inoremap <C-w> <C-o>w
+inoremap <C-e> <C-o>e
+
 "nerdtree config
 
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 "open nerdtree with ctrl + n
 map <C-n> :NERDTreeToggle<CR>
 "close if only nerdtree is left"
@@ -81,12 +92,18 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 "commandT config
 
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+
+"autocomplete navigation
+
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 "end
 

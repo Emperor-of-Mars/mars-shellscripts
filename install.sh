@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
 
 chmod a+x ./install-scripts/install.sh
 chmod a+x ./system-setup/capl_lock_to_escape_shell.sh
