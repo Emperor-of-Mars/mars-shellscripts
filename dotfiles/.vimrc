@@ -53,7 +53,11 @@ set clipboard=unnamed
 set wildmode=longest,list
 set wildmenu
 set timeoutlen=250
-let mapleader = "ß"
+let mapleader = "\<Space>"
+
+"easier mode switching
+
+inoremap jk <ESC>
 
 "easier split navigation
 
