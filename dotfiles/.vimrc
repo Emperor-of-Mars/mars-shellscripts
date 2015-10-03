@@ -68,7 +68,7 @@ nnoremap <C-H> <C-W><C-H>
 
 "easier insert mode movement
 
-inoremap <C-h> <C-o>h
+"inoremap <C-m> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
@@ -106,8 +106,11 @@ nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 "autocomplete navigation
 
-inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
-inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
+
+"show tab indent
+set list lcs=tab:\¦\ 
 
 "end
 
