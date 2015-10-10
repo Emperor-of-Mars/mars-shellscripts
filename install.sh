@@ -23,7 +23,6 @@ echo "Copying files"
 
 cp -r ./dotfiles/.moc ~/.moc
 cp ./dotfiles/.vimrc ~/.vimrc
-cp -r ./dotfiles/.vim ~/.vim
 cp ./dotfiles/.tmux.conf ~/.tmux.conf
 
 echo "Installing vim plugins"
