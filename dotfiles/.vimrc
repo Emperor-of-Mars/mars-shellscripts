@@ -57,7 +57,7 @@ let mapleader = "\<Space>"
 
 "easier mode switching
 
-inoremap jk <ESC>
+noremap <C-C> <ESC>
 
 "easier split navigation
 
