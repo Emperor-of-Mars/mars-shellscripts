@@ -1,0 +1,5 @@
+[user]
+	email = martin.schwarz10@gmail.com
+	name = Martin Schwarz
+[alias]
+	lol = log --graph --decorate --oneline --all

@@ -25,6 +25,7 @@ cp -r ./dotfiles/.moc ~/.moc
 cp -r ./dotfiles/.vim ~/.vim
 cp ./dotfiles/.vimrc ~/.vimrc
 cp ./dotfiles/.tmux.conf ~/.tmux.conf
+cp ./dotfiles/.gitconfig ~/.gitconfig
 
 echo "Installing vim plugins"
 
