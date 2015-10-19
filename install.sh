@@ -6,8 +6,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 chmod a+x ./install-scripts/install.sh
-chmod a+x ./system-setup/capl_lock_to_escape_shell.sh
-chmod a+x ./system-setup/capl_lock_to_escape_x.sh
+#chmod a+x ./system-setup/capl_lock_to_escape_shell.sh
+#chmod a+x ./system-setup/capl_lock_to_escape_x.sh
 
 echo "Executing installscripts"
 
@@ -16,8 +16,8 @@ echo "Executing installscripts"
 ./system-setup/capl_lock_to_escape_x.sh
 
 chmod a-x ./install-scripts/install.sh
-chmod a-x ./system-setup/capl_lock_to_escape_shell.sh
-chmod a-x ./system-setup/capl_lock_to_escape_x.sh
+#chmod a-x ./system-setup/capl_lock_to_escape_shell.sh
+#chmod a-x ./system-setup/capl_lock_to_escape_x.sh
 
 echo "Copying files"
 
