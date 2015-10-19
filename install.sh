@@ -22,6 +22,7 @@ chmod a-x ./system-setup/capl_lock_to_escape_x.sh
 echo "Copying files"
 
 cp -r ./dotfiles/.moc ~/.moc
+cp -r ./dotfiles/.vim ~/.vim
 cp ./dotfiles/.vimrc ~/.vimrc
 cp ./dotfiles/.tmux.conf ~/.tmux.conf
 
