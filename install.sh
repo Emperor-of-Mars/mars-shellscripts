@@ -12,8 +12,8 @@ chmod a+x ./install-scripts/install.sh
 echo "Executing installscripts"
 
 ./install-scripts/install.sh
-./system-setup/capl_lock_to_escape_shell.sh
-./system-setup/capl_lock_to_escape_x.sh
+#./system-setup/capl_lock_to_escape_shell.sh
+#./system-setup/capl_lock_to_escape_x.sh
 
 chmod a-x ./install-scripts/install.sh
 #chmod a-x ./system-setup/capl_lock_to_escape_shell.sh
